@@ -3,17 +3,17 @@
 
 set -o errexit -o pipefail -o nounset
 
-pkgname=$INPUT_PKGNAME
-pkgbuild=$INPUT_PKGBUILD
-assets=$INPUT_ASSETS
-updpkgsums=$INPUT_UPDPKGSUMS
-commit_username=$INPUT_COMMIT_USERNAME
-commit_email=$INPUT_COMMIT_EMAIL
-ssh_private_key=$INPUT_SSH_PRIVATE_KEY
-commit_message=$INPUT_COMMIT_MESSAGE
-allow_empty_commits=$INPUT_ALLOW_EMPTY_COMMITS
-force_push=$INPUT_FORCE_PUSH
-ssh_keyscan_types=$INPUT_SSH_KEYSCAN_TYPES
+pkgname="$INPUT_PKGNAME"
+pkgbuild="$INPUT_PKGBUILD"
+assets="$INPUT_ASSETS"
+updpkgsums="$INPUT_UPDPKGSUMS"
+commit_username="$INPUT_COMMIT_USERNAME"
+commit_email="$INPUT_COMMIT_EMAIL"
+ssh_private_key="$INPUT_SSH_PRIVATE_KEY"
+commit_message="$INPUT_COMMIT_MESSAGE"
+allow_empty_commits="$INPUT_ALLOW_EMPTY_COMMITS"
+force_push="$INPUT_FORCE_PUSH"
+ssh_keyscan_types="$INPUT_SSH_KEYSCAN_TYPES"
 
 assert_non_empty() {
   name=$1
